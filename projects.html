@@ -1,72 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <title>Amelia Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikita Portfolio</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
+
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <div id="navbar-placeholder"></div>
 
-<div id="navbar-placeholder"></div>
-    <div class="projects-page">
-      <h1 data-aos="zoom-in" data-aos-duration="1000">My Projects</h1>
-      <div class="projects-container">
-        <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-          <img src="logify.png" alt="Logify screenshot" class="project-image">
-          <h2>Logify</h2>
-          <p>This is a project that I created on DeerHcks. Logify is bla bla bla bla</p>
-          <div class="viewproject-button">
-            <a href="https://github.com/logify" target="_blank"></a>
-            <button>View Project</button>
-          </div>
-        </div>
-  
-        <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <img src="another-project.png" alt="Another project" class="project-image">
-          <h2>AnotherApp</h2>
-          <p>This is another project about something awesome.</p>
-          <div class="viewproject-button">
-            <a href="https://github.com/logify" target="_blank"></a>
-            <button>View Project</button>
-          </div>
-        </div>
+  <div class="projects-page">
+    <h1 data-aos="zoom-in" data-aos-duration="1000">My Projects</h1>
+    <div class="projects-container">
 
-        <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-            <img src="another-project.png" alt="Another project" class="project-image">
-            <h2>AnotherApp</h2>
-            <p>This is another project about something awesome.</p>
-            <div class="viewproject-button">
-                <a href="https://github.com/logify" target="_blank"></a>
-                <button>View Project</button>
-              </div>
-          </div>
-  
-        <!-- Add more project-card divs as needed -->
+      <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <img src="logify.png" alt="Logify screenshot" class="project-image" />
+        <h2>Logify</h2>
+        <p>This is a project that I created at DeerHacks. Logify is bla bla bla bla</p>
+        <div class="viewproject-button">
+          <a href="https://github.com/logify" target="_blank">
+            <button>View Project</button>
+          </a>
+        </div>
       </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <img src="another-project.png" alt="Another project" class="project-image" />
+        <h2>AnotherApp</h2>
+        <p>This is another project about something awesome.</p>
+        <div class="viewproject-button">
+          <a href="https://github.com/yourproject" target="_blank">
+            <button>View Project</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <img src="another-project.png" alt="Another project" class="project-image" />
+        <h2>AnotherApp</h2>
+        <p>This is another project about something awesome.</p>
+        <div class="viewproject-button">
+          <a href="https://github.com/yourproject" target="_blank">
+            <button>View Project</button>
+          </a>
+        </div>
+      </div>
+
     </div>
-    <script>
-        fetch("navbar.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("navbar-placeholder").innerHTML = data;
-          });
-      </script>
-  </body>
+  </div>
+
   <script>
-    function hamburg(){
-        const navbar = document.querySelector(".dropdown")
-        navbar.style.transform = "translateY(0px)"
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+      });
+  </script>
+
+  <script>
+    function hamburg() {
+      const navbar = document.querySelector(".dropdown");
+      navbar.style.transform = "translateY(0px)";
     }
-    function cancel(){
-        const navbar = document.querySelector(".dropdown")
-        navbar.style.transform = "translateY(-500px)"
+    function cancel() {
+      const navbar = document.querySelector(".dropdown");
+      navbar.style.transform = "translateY(-500px)";
     }
-</script>
-  
+  </script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
