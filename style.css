@@ -371,6 +371,7 @@ body, html {
     margin: 0;
   }
   .viewproject-button button {
+    margin-top: 1rem;
     background-color: #f6dbc2;
     color:rgb(109,67,0);
     border: none;
