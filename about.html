@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amelia Portfolio</title>
+
+  <!-- External Styles & AOS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+  <!-- MAIN CONTENT -->
+  <p class="p-about">Hi everyone, I'm someone who is passionate about tech and bla bla bla</p>
+  <h2 class="about-header">My experience</h2>
+  <div class="experience-box">
+    <div class="experience-header"><h1>Intern at PT Medion Farmajaya</h1></div>
+    <div class="experience-header"><h1>Intern at PT Medion Farmajaya</h1></div>
+    <div class="experience-header"><h1>Intern at PT Medion Farmajaya</h1></div>
+  </div>
+  <script>
+    fetch("navbar.html")
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById("navbar-placeholder").innerHTML = data;
+              });
+  </script>
+
+  <!-- AOS + NAV JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // NAVBAR TOGGLE
+    const hamburg = document.getElementById("hamburg");
+    const cancel = document.getElementById("cancel");
+    const dropdown = document.getElementById("dropdown");
+
+    hamburg.addEventListener("click", () => {
+      dropdown.style.transform = "translateY(0)";
+    });
+
+    cancel.addEventListener("click", () => {
+      dropdown.style.transform = "translateY(-500px)";
+    });
+  </script>
+</body>
+</html>
