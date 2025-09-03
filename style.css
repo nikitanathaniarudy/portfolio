@@ -204,7 +204,7 @@ section{
 
 @keyframes words {
     0%, 33%{
-        content: "CS + Applied Math Student";
+        content: "CS Student";
     }
     34%, 66%{
         content: "Full-Stack Developer";
