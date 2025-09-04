@@ -145,12 +145,12 @@ section{
     align-items: center;
 }
 
-.main-container .image{
+.main-container .image {
   position: relative;
-    z-index: 1;
-    width: 50%;
+  z-index: 1;
+  max-width: 200px; /* set fixed max size */
+  width: 100%;
 }
-
 .main-container .image img{
     width: 100%;
 }
