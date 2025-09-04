@@ -148,7 +148,7 @@ section{
 .main-container .image {
   position: relative;
   z-index: 1;
-  max-width: 200px; /* set fixed max size */
+  max-width: 400px; /* set fixed max size */
   width: 100%;
 }
 .main-container .image img{
