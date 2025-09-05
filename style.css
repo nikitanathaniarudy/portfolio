@@ -541,7 +541,6 @@ form {
     transform: scale(1.05);
   }
 
-
 .social-links {
   display: flex;
   gap: 20px;
@@ -591,4 +590,27 @@ form {
 
 .social-links a:hover svg {
   fill: #fff;
+}
+.skills {
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  background: #fff;
+  color: #5a3e1b; /* match your brown accent */
+  border: 1.5px solid #5a3e1b;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skills span:hover {
+  background: #5a3e1b;
+  color: #fff;
+  transform: scale(1.05);
 }
