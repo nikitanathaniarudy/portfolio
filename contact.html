@@ -10,7 +10,7 @@
 <body>
     <div id="navbar-placeholder"></div>
     <h1>Connect with me!</h1>
-    <form action="https://formspree.io/f/mqadgynd" method="POST">
+    <form id="contact-form">
   <div class="form-group">
     <label for="email">Email address</label>
     <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
@@ -45,5 +45,33 @@
       dropdown.style.transform = "translateY(-500px)";
     });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS with your Public Key
+  (function(){
+    emailjs.init("aq09fjg3B9icAZCPA"); // 🔹 Replace with your Public Key
+  })();
+
+  // Handle form submission
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const btn = this.querySelector("button");
+  btn.disabled = true;
+  btn.innerText = "Sending...";
+
+  emailjs.sendForm("service_38z6ap9", "template_jpktpcd", this)
+    .then(() => {
+      alert("✅ Message sent successfully!");
+      this.reset(); // clear form after send
+    }, (error) => {
+      alert("❌ Failed to send message: " + error.text);
+    })
+    .finally(() => {
+      btn.disabled = false;
+      btn.innerText = "Send";
+    });
+});
+</script>
 </body>
 </html>
