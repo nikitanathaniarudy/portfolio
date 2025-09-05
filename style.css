@@ -540,6 +540,23 @@ form {
     background-color: #fca554;
     transform: scale(1.05);
   }
+  .social-links a {
+  color: #ffffff;        /* base color */
+  font-size: 24px;       /* size for FA icons */
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.social-links a svg {
+  width: 24px; 
+  height: 24px;
+  fill: currentColor;   /* inherit the same color as FA icons */
+  vertical-align: middle;
+}
+
+.social-links a:hover {
+  color: #57C1FF;       /* hover highlight (Devpost blue) */
+}
 
   
   
