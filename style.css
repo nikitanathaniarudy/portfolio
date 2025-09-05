@@ -541,22 +541,23 @@ form {
     transform: scale(1.05);
   }
  .social-links a {
-  color: #603813;             /* brown tone */
+  color: #603813;                 /* brown tone */
   font-size: 24px;
   margin: 0 10px;
   transition: 0.3s;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50px;                /* same size circle */
+  width: 50px;
   height: 50px;
-  border: 2px solid currentColor;
+  border: 2px solid currentColor; /* makes the circle */
   border-radius: 50%;
 }
+
 .social-links a svg {
-  width: 24px;
-  height: 24px;
-  fill: currentColor;
+  width: 22px;
+  height: 22px;
+  fill: currentColor;              /* inherits color */
 }
 
 .social-links a:hover {
