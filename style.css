@@ -342,13 +342,13 @@ body, html {
   
   /* Individual project block */
   .project-card {
-    background:rgb(255, 194, 159);
-    border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    min-height: 200px;
-  }
+  background: rgb(255, 194, 159);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-height: 200px; /* <-- add this line */
+}
   
   /* Image */
   .project-image {
