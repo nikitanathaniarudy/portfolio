@@ -406,14 +406,28 @@ body, html {
   
   /* About Section */
 .about-header {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: rgb(109, 67, 0);
-    text-align: center;
-    margin-top: 2rem;
-    text-shadow: 0 0 5px rgba(109, 67, 0, 0.3);
-  }
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 2rem;
+  background: linear-gradient(90deg, #d2691e, #ff914d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(255, 145, 77, 0.3);
+}
   
+.about-header::after {
+  content: '';
+  display: block;
+  margin: 0.5rem auto 0;
+  width: 0%;
+  height: 3px;
+  background: #ff914d;
+  transition: width 0.3s ease-in-out;
+}
+.about-header:hover::after {
+  width: 40%;
+}
   .p-about {
     max-width: 800px;
     margin: 1rem auto 3rem;
@@ -436,20 +450,21 @@ body, html {
   
   /* Individual Experience Item */
   .experience-header {
-    background: rgb(255, 228, 207);
-    border: 2px solid rgb(109, 67, 0);
-    border-radius: 12px;
-    padding: 1rem 2rem;
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(109, 67, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .experience-header:hover {
-    transform: translateY(-5px);
-  }
+  background: linear-gradient(135deg, #fff0e5, #ffe4cc);
+  border: 2px solid rgb(109, 67, 0);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(109, 67, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-header:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(109, 67, 0, 0.25);
+}
   
   .experience-header h1 {
     font-size: 1.25rem;
