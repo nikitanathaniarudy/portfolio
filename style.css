@@ -11,12 +11,13 @@ html{
     overflow-x: hidden;
 }
 
-/* body {
+body {
     width: 100%;
     min-height: 100vh;  
     overflow-x: hidden;  
     background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
-} */
+    overflow-y: scroll;
+}
 
 nav{
     width: 100%;
