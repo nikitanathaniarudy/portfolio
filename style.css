@@ -450,7 +450,7 @@ body, html {
 
 /* Individual Experience Item */
 .experience-header {
-  background: linear-gradient(135deg, #e8a199, #f3c8ab); /* same as project card */
+  background: linear-gradient(135deg, #f1c7b2, #f3c8ab); /* same as project card */
   border: 2px solid rgb(109, 67, 0);
   border-radius: 16px;
   padding: 1.5rem 2rem;
