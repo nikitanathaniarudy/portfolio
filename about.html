@@ -44,31 +44,30 @@ I'm fluent in Indonesian 🇮🇩, Japanese 🇯🇵, Chinese 🇨🇳, and Fren
 </div>
   
   </div>
+
+
   <script>
-    fetch("navbar.html")
-              .then(response => response.text())
-              .then(data => {
-                document.getElementById("navbar-placeholder").innerHTML = data;
-              });
-  </script>
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
 
-  <!-- AOS + NAV JS -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
+      // Define the same functions that navbar.html calls
+      window.hamburg = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(0)";
+      }
 
-    // NAVBAR TOGGLE
-    const hamburg = document.getElementById("hamburg");
-    const cancel = document.getElementById("cancel");
-    const dropdown = document.getElementById("dropdown");
-
-    hamburg.addEventListener("click", () => {
-      dropdown.style.transform = "translateY(0)";
+      window.cancel = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(-500px)";
+      }
     });
+</script>
 
-    cancel.addEventListener("click", () => {
-      dropdown.style.transform = "translateY(-500px)";
-    });
-  </script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({ offset: 0 });
+</script>
 </body>
 </html>

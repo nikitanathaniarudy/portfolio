@@ -86,35 +86,29 @@
 </div> 
 
 
-  <!-- keep your navbar fetch but refresh AOS after injecting dynamic content -->
-<script>
+  <script>
   fetch("navbar.html")
     .then(response => response.text())
     .then(data => {
       document.getElementById("navbar-placeholder").innerHTML = data;
-      // If AOS already loaded, refresh positions so animations will trigger
-      if (window.AOS) AOS.refresh();
-    })
-    .catch(err => console.error('Navbar load error:', err));
+
+      // Define the same functions that navbar.html calls
+      window.hamburg = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(0)";
+      }
+
+      window.cancel = function () {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(-500px)";
+      }
+    });
 </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    if (window.AOS) {
-      AOS.init({
-        duration: 800,        // animation duration in ms
-        easing: 'ease-out-cubic',
-        once: true,           // whether animation should happen only once
-        offset: 100           // offset (px) from bottom of viewport to trigger
-      });
-    } else {
-      console.warn('AOS not loaded.');
-    }
-  });
-
+  AOS.init({ offset: 0 });
+</script>
 
 </script>
 </body>
